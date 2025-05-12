@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>1Win Clone - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>1Win Casino Clone</h1>
+  <div class="balance">Balance: ₹<span id="balance">0</span></div>
+
+  <div class="games">
+    <a class="game-btn" href="aviator.html">Aviator</a>
+    <a class="game-btn" href="dice.html">Dice</a>
+    <a class="game-btn" href="spin.html">Spin Wheel</a>
+  </div>
+
+  <script>
+    if (!localStorage.getItem("balance")) {
+      localStorage.setItem("balance", "1000");
+    }
+    document.getElementById("balance").textContent = localStorage.getItem("balance");
+  </script>
+</body>
+</html>

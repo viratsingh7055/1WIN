@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aviator - Rigged</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Aviator (Rigged)</h1>
+  <div class="balance">Balance: ₹<span id="balance">0</span></div>
+  <input type="number" id="betAmount" value="100" min="10">
+  <button onclick="startGame()">Place Bet</button>
+
+  <h2 id="status">Waiting...</h2>
+  <br>
+  <a href="index.html" class="game-btn">Back</a>
+
+  <script>
+    let balance = parseFloat(localStorage.getItem("balance"));
+    document.getElementById("balance").textContent = balance.toFixed(2);
+
+    function startGame() {
+      const bet = parseFloat(document.getElementById("betAmount").value);
+      if (bet > balance || bet <= 0) {
+        alert("Invalid bet");
+        return;
+      }
+
+      balance -= bet;
+      localStorage.setItem("balance", balance.toFixed(2));
+      document.getElementById("balance").textContent = balance.toFixed(2);
+
+      document.getElementById("status").textContent = "Plane flying...";
+      setTimeout(() => {
+        document.getElementById("status").textContent = "CRASHED! You lost ₹" + bet.toFixed(2);
+      }, 2000);
+    }
+  </script>
+</body>
+</html>

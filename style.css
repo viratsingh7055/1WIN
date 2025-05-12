@@ -1,0 +1,39 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background-color: #101010;
+  color: #fff;
+  margin-top: 50px;
+}
+
+h1 {
+  color: #00ff99;
+}
+
+.balance {
+  font-size: 20px;
+  margin: 20px;
+}
+
+.games {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.game-btn {
+  background: #222;
+  border: 2px solid #00ff99;
+  color: #00ff99;
+  padding: 20px 30px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.game-btn:hover {
+  background-color: #00ff99;
+  color: #000;
+}
