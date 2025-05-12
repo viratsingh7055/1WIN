@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>1Win Clone - Home</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>1WIN Simple Game</title>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      text-align: center;
+      font-family: Arial;
+    }
+    .plane {
+      font-size: 80px;
+      animation: fly 5s linear infinite;
+    }
+    @keyframes fly {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(100vw); }
+    }
+  </style>
 </head>
 <body>
-  <h1>1Win Casino Clone</h1>
-  <div class="balance">Balance: ₹<span id="balance">0</span></div>
-
-  <div class="games">
-    <a class="game-btn" href="aviator.html">Aviator</a>
-    <a class="game-btn" href="dice.html">Dice</a>
-    <a class="game-btn" href="spin.html">Spin Wheel</a>
-  </div>
-
-  <script>
-    if (!localStorage.getItem("balance")) {
-      localStorage.setItem("balance", "1000");
-    }
-    document.getElementById("balance").textContent = localStorage.getItem("balance");
-  </script>
+  <h1>Welcome to 1WIN</h1>
+  <div class="plane">✈️</div>
+  <p>This is a simple test page for your game.</p>
 </body>
 </html>
